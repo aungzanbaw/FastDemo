@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fast-api-ingress
+spec:
+  rules:
+  - hosts: k8.__.org
+    http:
+      paths:
+      - path: /
+        pathType: Exact
+        backend:
+          service:
+            name: my-service
+            port:
+              number: 80
