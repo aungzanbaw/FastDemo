@@ -19,3 +19,10 @@ spec:
         image: aungbaw/fastapi-k8:0.0.1
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            cpu: 200m
+            memory: 300Mi
+          limits:
+            memory: 400Mi
+            
